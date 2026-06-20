@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pratham Kadam Trust — Dedicated to the holistic development of orphaned children through education, healthcare, nutrition, digital access, and mentorship. Ranchi, Jharkhand, India.">
+<meta name="keywords" content="Pratham Kadam Trust, orphan welfare, child welfare, Ranchi, Jharkhand, charitable trust, education, healthcare">
+<meta property="og:title" content="Pratham Kadam Trust — प्रथम कदम ट्रस्ट">
+<meta property="og:description" content="Dedicated to the holistic development of orphaned children. Privately funded. Transparently governed.">
+<meta property="og:type" content="website">
+<title>Pratham Kadam Trust — प्रथम कदम ट्रस्ट</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#080808;color:#E8DDD0;overflow-x:hidden;line-height:1.6;}
+
+/* REVEAL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(.22,1,.36,1),transform 0.8s cubic-bezier(.22,1,.36,1);}
+.reveal.v{opacity:1;transform:none;}
+.reveal-l{opacity:0;transform:translateX(-40px);transition:opacity 0.8s cubic-bezier(.22,1,.36,1),transform 0.8s cubic-bezier(.22,1,.36,1);}
+.reveal-l.v{opacity:1;transform:none;}
+.reveal-r{opacity:0;transform:translateX(40px);transition:opacity 0.8s cubic-bezier(.22,1,.36,1),transform 0.8s cubic-bezier(.22,1,.36,1);}
+.reveal-r.v{opacity:1;transform:none;}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(8,8,8,0.94);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,140,0,0.12);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2.5rem;height:60px;
+}
+.nav-en{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#FF8C00;letter-spacing:0.02em;}
+.nav-hi{font-size:0.58rem;color:#5A4A38;letter-spacing:0.07em;margin-top:1px;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:#8A7A68;text-decoration:none;font-size:0.72rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:#FF8C00;}
+.nav-menu-btn{display:none;background:none;border:none;color:#8A7A68;font-size:1.4rem;cursor:pointer;padding:0.25rem;}
+
+/* HERO */
+.hero{
+  min-height:96vh;
+  background:#080808;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:5rem 2.5rem 4rem;
+  position:relative;overflow:hidden;
+}
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+.o1{width:600px;height:600px;right:-120px;top:-120px;background:radial-gradient(circle,rgba(255,140,0,0.22) 0%,rgba(255,80,0,0.08) 45%,transparent 70%);animation:breathe 7s ease-in-out infinite;}
+.o2{width:300px;height:300px;left:20%;bottom:-60px;background:radial-gradient(circle,rgba(255,100,0,0.1) 0%,transparent 70%);animation:breathe 9s ease-in-out infinite reverse;}
+.o3{width:80px;height:80px;left:38%;top:18%;background:radial-gradient(circle,rgba(255,180,0,0.18) 0%,transparent 70%);animation:float 5s ease-in-out infinite;}
+@keyframes breathe{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+
+.hero-pill{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  border:1px solid rgba(255,140,0,0.3);
+  background:rgba(255,140,0,0.07);
+  color:#FF8C00;font-size:0.68rem;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  padding:0.4rem 1rem;border-radius:50px;
+  margin-bottom:1.8rem;width:fit-content;
+  animation:fadein 0.8s ease both;
+}
+.pill-dot{width:6px;height:6px;border-radius:50%;background:#FF8C00;animation:blink 1.6s ease infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.2;}}
+@keyframes fadein{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:none;}}
+
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:4.2rem;font-weight:900;line-height:1.03;
+  color:#F0EBE3;margin-bottom:0.3rem;
+  animation:riseup 0.9s 0.2s ease both;
+  max-width:640px;
+}
+.hero-h1 .acc{color:#FF8C00;}
+.hero-h1 .it{font-style:italic;}
+.hero-hi{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-style:italic;
+  color:#5A4A38;margin-bottom:1.4rem;
+  animation:riseup 0.9s 0.35s ease both;
+}
+.hero-desc{
+  font-size:0.95rem;color:#C8BAA8;line-height:1.85;
+  max-width:500px;margin-bottom:2.2rem;
+  animation:riseup 0.9s 0.5s ease both;
+}
+@keyframes riseup{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+
+.hero-cta{
+  background:#FF8C00;color:#080808;border:none;
+  padding:0.9rem 2.2rem;font-size:0.8rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  border-radius:50px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:0.6rem;
+  transition:background 0.25s,transform 0.2s,box-shadow 0.25s;
+  animation:riseup 0.9s 0.65s ease both;
+  box-shadow:0 0 40px rgba(255,140,0,0.35);
+  text-decoration:none;
+}
+.hero-cta:hover{background:#FFA020;transform:translateY(-3px);box-shadow:0 0 60px rgba(255,140,0,0.5);}
+.hero-cta:hover svg{transform:translateX(5px);}
+.hero-cta svg{transition:transform 0.2s;}
+
+.hero-stats{
+  display:flex;gap:3.5rem;margin-top:3.5rem;
+  padding-top:2rem;
+  border-top:1px solid rgba(255,140,0,0.1);
+  animation:riseup 0.9s 0.8s ease both;
+}
+.hstat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:#FF8C00;}
+.hstat-lbl{font-size:0.68rem;color:#8A7A68;letter-spacing:0.09em;text-transform:uppercase;margin-top:0.15rem;}
+
+/* TICKER */
+.ticker-wrap{background:#FF8C00;padding:0.95rem 0;overflow:hidden;display:flex;align-items:center;}
+.ticker-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(8,8,8,0.5);white-space:nowrap;padding:0 1.5rem;flex-shrink:0;}
+.ticker-inner{display:flex;animation:ticker 20s linear infinite;}
+.ticker-item{font-size:0.88rem;font-weight:600;color:#080808;white-space:nowrap;padding:0 1.8rem;}
+.ticker-sep{color:rgba(8,8,8,0.3);}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* SECTIONS */
+.sec{padding:5rem 2.5rem;border-bottom:1px solid rgba(255,140,0,0.07);}
+.sec-inner{max-width:900px;margin:0 auto;}
+.eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#FF8C00;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.eyebrow::before{content:'';display:inline-block;width:18px;height:2px;background:#FF8C00;border-radius:2px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;color:#F0EBE3;line-height:1.15;margin-bottom:0.5rem;}
+.sec-title em{font-style:italic;color:#FF8C00;}
+.sec-desc{font-size:0.92rem;color:#C8BAA8;line-height:1.8;max-width:520px;margin-bottom:2.8rem;}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,140,0,0.08);border:1px solid rgba(255,140,0,0.08);}
+.pillar{background:#080808;padding:2rem 1.6rem;transition:background 0.3s;position:relative;overflow:hidden;}
+.pillar::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#FF8C00,transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;}
+.pillar:hover{background:#0e0a06;}
+.pillar:hover::before{transform:scaleX(1);}
+.pillar-ico{width:42px;height:42px;border-radius:10px;background:rgba(255,140,0,0.08);border:1px solid rgba(255,140,0,0.15);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1rem;transition:background 0.3s,border-color 0.3s;}
+.pillar:hover .pillar-ico{background:rgba(255,140,0,0.15);border-color:rgba(255,140,0,0.3);}
+.pillar-name{font-size:0.9rem;font-weight:600;color:#F0EBE3;margin-bottom:0.15rem;}
+.pillar-hi{font-size:0.65rem;color:#5A4A38;margin-bottom:0.6rem;}
+.pillar-desc{font-size:0.78rem;color:#C8BAA8;line-height:1.7;}
+
+/* QUOTE BAND */
+.quote-band{background:#FF8C00;padding:4.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+.quote-band::before{content:'\201C';position:absolute;left:2rem;top:-1rem;font-family:'Playfair Display',serif;font-size:12rem;font-weight:900;color:rgba(8,8,8,0.08);line-height:1;pointer-events:none;}
+.qt{font-family:'Playfair Display',serif;font-size:1.75rem;font-style:italic;font-weight:700;color:#080808;line-height:1.42;max-width:660px;margin:0 auto 1rem;}
+.qt span{text-decoration:underline;text-decoration-color:rgba(8,8,8,0.25);}
+.qa{font-size:0.72rem;color:rgba(8,8,8,0.5);letter-spacing:0.12em;text-transform:uppercase;}
+
+/* PEOPLE */
+.people-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.person{background:#0F0B07;border:1px solid rgba(255,140,0,0.12);border-radius:18px;padding:2.2rem;position:relative;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;}
+.person:hover{border-color:rgba(255,140,0,0.35);box-shadow:0 0 40px rgba(255,140,0,0.07);}
+.person::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#FF8C00,#FFB830);}
+.avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#C45C00,#FF8C00);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:1.2rem;box-shadow:0 0 24px rgba(255,140,0,0.35);}
+.p-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#F0EBE3;margin-bottom:0.2rem;}
+.p-role{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#FF8C00;margin-bottom:0.2rem;}
+.p-org{font-size:0.75rem;color:#8A7A68;padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid rgba(255,140,0,0.08);}
+.p-bio{font-size:0.85rem;color:#C8BAA8;line-height:1.82;}
+.p-badge{display:inline-block;margin-top:1rem;background:rgba(255,140,0,0.08);border:1px solid rgba(255,140,0,0.2);color:#FF8C00;font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:50px;}
+
+/* ADDRESS */
+.addr{background:#0F0B07;border:1px solid rgba(255,140,0,0.12);border-radius:14px;padding:1.6rem 2rem;margin-top:2rem;display:flex;align-items:flex-start;gap:1.2rem;transition:border-color 0.3s;}
+.addr:hover{border-color:rgba(255,140,0,0.28);}
+.addr-ico{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:rgba(255,140,0,0.1);border:1px solid rgba(255,140,0,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.addr-lbl{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#FF8C00;margin-bottom:0.4rem;}
+.addr-txt{font-size:0.88rem;color:#C8BAA8;line-height:1.8;}
+.addr-pin{color:#FF8C00;font-weight:600;}
+
+/* FUNDING */
+.funding-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+.fcell{background:#0F0B07;border:1px solid rgba(255,140,0,0.1);border-radius:14px;padding:1.6rem 1.8rem;transition:border-color 0.3s;}
+.fcell:hover{border-color:rgba(255,140,0,0.28);}
+.fc-lbl{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#FF8C00;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.fc-lbl::before{content:'';width:5px;height:5px;border-radius:50%;background:#FF8C00;flex-shrink:0;}
+.fc-val{font-size:0.85rem;color:#C8BAA8;line-height:1.78;}
+
+/* ROADMAP */
+.rm{display:flex;flex-direction:column;}
+.rm-row{display:flex;gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid rgba(255,140,0,0.06);}
+.rm-row:last-child{border-bottom:none;}
+.rm-num{width:34px;height:34px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;background:#0F0B07;border:1px solid rgba(255,140,0,0.12);color:#8A7A68;}
+.rm-row.done .rm-num{background:#FF8C00;border-color:#FF8C00;color:#080808;}
+.rm-row.active .rm-num{background:transparent;border:2px solid #FF8C00;color:#FF8C00;box-shadow:0 0 16px rgba(255,140,0,0.3);}
+.rm-title{font-size:0.92rem;font-weight:600;color:#F0EBE3;margin-bottom:0.3rem;}
+.rm-desc{font-size:0.82rem;color:#C8BAA8;line-height:1.7;}
+.rm-tag{display:inline-block;margin-top:0.4rem;background:rgba(255,140,0,0.08);border:1px solid rgba(255,140,0,0.2);color:#FF8C00;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.15rem 0.55rem;border-radius:50px;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:0.5rem;}
+.contact-card{background:#0F0B07;border:1px solid rgba(255,140,0,0.1);border-radius:14px;padding:1.6rem 1.8rem;}
+.contact-lbl{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#FF8C00;margin-bottom:0.5rem;}
+.contact-val{font-size:0.88rem;color:#C8BAA8;line-height:1.75;}
+
+/* FOOTER */
+footer{background:#050505;padding:3rem 2.5rem 1.5rem;border-top:1px solid rgba(255,140,0,0.08);}
+.ft{display:flex;justify-content:space-between;gap:3rem;margin-bottom:2.5rem;}
+.fb-en{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#FF8C00;}
+.fb-hi{font-size:0.6rem;color:#5A4A38;margin-top:0.15rem;letter-spacing:0.07em;}
+.fb-note{font-size:0.75rem;color:#8A7A68;line-height:1.65;max-width:210px;margin-top:0.8rem;}
+.fl-wrap{display:flex;gap:3rem;}
+.fl-col-title{font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#5A4A38;margin-bottom:0.65rem;}
+.fl{display:block;font-size:0.78rem;color:#8A7A68;text-decoration:none;margin-bottom:0.35rem;transition:color 0.2s;}
+.fl:hover{color:#FF8C00;}
+.fb-bottom{border-top:1px solid rgba(255,140,0,0.07);padding-top:1.2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
+.fl-leg{font-size:0.65rem;color:#5A4A38;}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0 1.2rem;}
+  .nav-links{display:none;}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:#0d0d0d;border-bottom:1px solid rgba(255,140,0,0.12);padding:1rem 1.5rem;gap:1rem;z-index:199;}
+  .nav-menu-btn{display:block;}
+  .hero{padding:4rem 1.5rem 3rem;min-height:auto;}
+  .hero-h1{font-size:2.6rem;}
+  .o1{width:300px;height:300px;right:-60px;top:-60px;}
+  .hero-stats{gap:1.8rem;}
+  .hstat-num{font-size:1.6rem;}
+  .sec{padding:3.5rem 1.5rem;}
+  .pillars{grid-template-columns:1fr 1fr;}
+  .people-grid{grid-template-columns:1fr;}
+  .funding-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .ft{flex-direction:column;gap:2rem;}
+  .fl-wrap{gap:2rem;}
+  .qt{font-size:1.3rem;}
+  .sec-title{font-size:1.8rem;}
+}
+@media(max-width:480px){
+  .hero-h1{font-size:2rem;}
+  .pillars{grid-template-columns:1fr;}
+  .hero-stats{flex-direction:column;gap:1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div>
+    <div class="nav-en">Pratham Kadam Trust</div>
+    <div class="nav-hi">प्रथम कदम ट्रस्ट · Ranchi, Jharkhand</div>
+  </div>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="mission">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+
+  <div class="hero-pill"><span class="pill-dot"></span>Charitable Trust · Jharkhand, India</div>
+
+  <h1 class="hero-h1">
+    The <span class="it acc">first step</span><br>
+    changes a child's<br>
+    <span class="acc">entire world.</span>
+  </h1>
+  <p class="hero-hi">प्रथम कदम — एक नई शुरुआत, एक उज्जवल भविष्य।</p>
+  <p class="hero-desc">Pratham Kadam Trust is dedicated to the holistic development of orphaned children — providing education, healthcare, nutrition, digital access, and mentorship so every child walks forward with dignity.</p>
+
+  <a href="#programs" class="hero-cta">
+    Explore Our Mission
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <div class="hero-stats">
+    <div><div class="hstat-num">5–18</div><div class="hstat-lbl">Age group served</div></div>
+    <div><div class="hstat-num">6</div><div class="hstat-lbl">Pillars of support</div></div>
+    <div><div class="hstat-num">100%</div><div class="hstat-lbl">Privately funded</div></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <span class="ticker-tag">Our work</span>
+  <div style="overflow:hidden;flex:1;">
+    <div class="ticker-inner">
+      <span class="ticker-item">Education <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Healthcare <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Nutrition <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Digital Access <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Mentorship <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Career Guidance <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Skill Development <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Education <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Healthcare <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Nutrition <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Digital Access <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Mentorship <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Career Guidance <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Skill Development <span class="ticker-sep">·</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section class="sec" id="programs">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">What we do</div>
+      <h2 class="sec-title">Six pillars of <em>holistic support</em></h2>
+      <p class="sec-desc">Every child in our care receives comprehensive, end-to-end support across six essential areas — because one pillar alone is never enough.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal d1"><div class="pillar-ico">📚</div><div class="pillar-name">Education</div><div class="pillar-hi">शिक्षा</div><div class="pillar-desc">School fees, books, uniforms, digital devices, and scholarships ensuring no child is left behind.</div></div>
+      <div class="pillar reveal d2"><div class="pillar-ico">🏥</div><div class="pillar-name">Healthcare</div><div class="pillar-hi">स्वास्थ्य सेवा</div><div class="pillar-desc">Medical check-ups, treatment support, and preventive programs so every child grows up healthy.</div></div>
+      <div class="pillar reveal d3"><div class="pillar-ico">🌾</div><div class="pillar-name">Nutrition</div><div class="pillar-hi">पोषण</div><div class="pillar-desc">Nutritional assistance during critical growth years, building strong bodies and focused minds.</div></div>
+      <div class="pillar reveal d4"><div class="pillar-ico">💻</div><div class="pillar-name">Digital Access</div><div class="pillar-hi">डिजिटल पहुंच</div><div class="pillar-desc">Devices and connectivity bridging the digital divide, opening 21st-century opportunities.</div></div>
+      <div class="pillar reveal d5"><div class="pillar-ico">🤝</div><div class="pillar-name">Mentorship</div><div class="pillar-hi">मार्गदर्शन</div><div class="pillar-desc">One-on-one guidance providing consistent emotional and academic support at every stage.</div></div>
+      <div class="pillar reveal d5"><div class="pillar-ico">🎓</div><div class="pillar-name">Career Guidance</div><div class="pillar-hi">कैरियर मार्गदर्शन</div><div class="pillar-desc">Skill development and counseling preparing children for independent, dignified futures.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="quote-band">
+  <p class="qt">"Begin with a pilot — <span>comprehensive support for a few children</span> — then scale with measurable outcomes and full transparency."</p>
+  <p class="qa">— Founding Vision · Pratham Kadam Trust</p>
+</div>
+
+<!-- PEOPLE -->
+<section class="sec" id="people">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">Governance &amp; Leadership</div>
+      <h2 class="sec-title">The people behind <em>Pratham Kadam</em></h2>
+      <p class="sec-desc">A trust built on personal conviction, funded by personal earnings, and guided by the deepest personal purpose — family.</p>
+    </div>
+    <div class="people-grid">
+      <div class="person reveal-l">
+        <div class="avatar">GK</div>
+        <div class="p-name">Ganesh Kumar Pandey</div>
+        <div class="p-role">Founder &amp; Managing Trustee</div>
+        <div class="p-org">Research Engineer · General Electric &nbsp;|&nbsp; PhD Scholar · IIT Kharagpur</div>
+        <div class="p-bio">A research engineer and doctoral scholar in smart grid systems and AI-based energy optimization, Ganesh Kumar Pandey founded Pratham Kadam Trust out of a lifelong belief that every child deserves a fair start. He personally funds the trust through his professional earnings — ensuring the mission remains independent, purpose-driven, and completely free from external influence. His dedication to technology is matched only by his commitment to human dignity.</div>
+        <span class="p-badge">Founding Trustee</span>
+      </div>
+      <div class="person reveal-r">
+        <div class="avatar">SD</div>
+        <div class="p-name">Shanti Devi</div>
+        <div class="p-role">Trustee</div>
+        <div class="p-org">Homemaker · Ranchi, Jharkhand</div>
+        <div class="p-bio">Shanti Devi is the moral heart of Pratham Kadam Trust. A devoted homemaker who raised her family with deep values of compassion, sacrifice, and quiet strength, she brings lived wisdom and unwavering commitment to child welfare to the trust's governance. The trust draws its name and spirit from her — a tribute to the woman whose love has always been the family's very first step forward.</div>
+        <span class="p-badge">Founding Trustee</span>
+      </div>
+    </div>
+    <div class="addr reveal d2">
+      <div class="addr-ico">📍</div>
+      <div>
+        <div class="addr-lbl">Registered Address</div>
+        <div class="addr-txt">2/B, Dutta Villa Road, New Area, Morabadi<br>Ranchi, Jharkhand, India — <span class="addr-pin">PIN 834008</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDING -->
+<section class="sec" style="background:#0A0704;">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">Financial Structure</div>
+      <h2 class="sec-title">How we are <em>funded</em></h2>
+      <p class="sec-desc">Pratham Kadam Trust does not solicit or accept public donations. Our independence is our integrity.</p>
+    </div>
+    <div class="funding-grid">
+      <div class="fcell reveal d1"><div class="fc-lbl">Sole funding source</div><div class="fc-val">Entirely from the personal earnings of the founder. The trust does not solicit or accept any external or public contributions.</div></div>
+      <div class="fcell reveal d2"><div class="fc-lbl">Long-term corpus goal</div><div class="fc-val">To build a self-sustaining financial corpus over time, ensuring support for children across generations without outside reliance.</div></div>
+      <div class="fcell reveal d3"><div class="fc-lbl">Governance commitment</div><div class="fc-val">Mission continuity and child welfare above all personal interests. Trustees are bound to uphold this at every decision.</div></div>
+      <div class="fcell reveal d4"><div class="fc-lbl">Operating philosophy</div><div class="fc-val">Pilot-first. Deep, documented, measurable impact on a small cohort before any expansion. Quality and transparency are non-negotiable.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="sec" id="roadmap">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">First-year plan</div>
+      <h2 class="sec-title">Building <em>step by step</em></h2>
+      <p class="sec-desc">A deliberate, grounded approach — every milestone earned before the next is attempted.</p>
+    </div>
+    <div class="rm">
+      <div class="rm-row done reveal d1">
+        <div class="rm-num">01</div>
+        <div><div class="rm-title">Register the Trust</div><div class="rm-desc">Legal trust registration under the Indian Trusts Act, PAN obtainment, and formal establishment of the charitable entity.</div><span class="rm-tag">Completed</span></div>
+      </div>
+      <div class="rm-row done reveal d2">
+        <div class="rm-num">02</div>
+        <div><div class="rm-title">Banking &amp; Governance</div><div class="rm-desc">Open a dedicated trust bank account and establish formal governance procedures and trustee responsibilities.</div><span class="rm-tag">Completed</span></div>
+      </div>
+      <div class="rm-row active reveal d3">
+        <div class="rm-num">03</div>
+        <div><div class="rm-title">Beneficiary Selection</div><div class="rm-desc">Define clear, fair criteria for identifying beneficiaries. Identify the first small cohort of orphaned children aged 5–18.</div></div>
+      </div>
+      <div class="rm-row reveal d4">
+        <div class="rm-num">04</div>
+        <div><div class="rm-title">Launch Pilot Program</div><div class="rm-desc">Begin comprehensive support for the first cohort across all six pillars — education, health, nutrition, digital access, mentorship, and career guidance.</div></div>
+      </div>
+      <div class="rm-row reveal d5">
+        <div class="rm-num">05</div>
+        <div><div class="rm-title">Document &amp; Measure</div><div class="rm-desc">Maintain detailed records of every child's progress. Publish transparent outcome reports. Evaluate before any expansion.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="sec-inner">
+    <div class="reveal">
+      <div class="eyebrow">Get in touch</div>
+      <h2 class="sec-title">Contact <em>us</em></h2>
+      <p class="sec-desc">For inquiries about the trust, its work, or collaboration opportunities, reach out to us directly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal d1">
+        <div class="contact-lbl">Trustee — Ganesh Kumar Pandey</div>
+        <div class="contact-val">Founder &amp; Managing Trustee<br>Research Engineer · General Electric<br>PhD Scholar · IIT Kharagpur</div>
+      </div>
+      <div class="contact-card reveal d2">
+        <div class="contact-lbl">Registered Address</div>
+        <div class="contact-val">2/B, Dutta Villa Road, New Area<br>Morabadi, Ranchi<br>Jharkhand, India — <span style="color:#FF8C00;font-weight:600;">PIN 834008</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="fb-en">Pratham Kadam Trust</div>
+      <div class="fb-hi">प्रथम कदम ट्रस्ट</div>
+      <div class="fb-note">Dedicated to orphaned children. Privately funded. Transparently governed. Ranchi, Jharkhand.</div>
+    </div>
+    <div class="fl-wrap">
+      <div>
+        <div class="fl-col-title">Trust</div>
+        <a href="#mission" class="fl">Our Mission</a>
+        <a href="#programs" class="fl">Programs</a>
+        <a href="#people" class="fl">Governance</a>
+        <a href="#roadmap" class="fl">Roadmap</a>
+      </div>
+      <div>
+        <div class="fl-col-title">Connect</div>
+        <a href="#people" class="fl">Our People</a>
+        <a href="#contact" class="fl">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="fb-bottom">
+    <div class="fl-leg">© 2025 Pratham Kadam Trust · Registered Charitable Trust · India</div>
+    <div class="fl-leg">2/B Dutta Villa Road, Morabadi, Ranchi — 834008</div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('v'); });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => obs.observe(el));
+
+// Mobile menu
+const btn = document.getElementById('menuBtn');
+const links = document.getElementById('navlinks');
+btn.addEventListener('click', () => {
+  links.classList.toggle('open');
+  btn.textContent = links.classList.contains('open') ? '✕' : '☰';
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    links.classList.remove('open');
+    btn.textContent = '☰';
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+</script>
+</body>
+</html>
